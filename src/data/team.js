@@ -1,0 +1,44 @@
+export const founders = [
+  {
+    id: 1,
+    name: 'Anitha Ainavolu',
+    role: 'Founder',
+    bio: 'A visionary lady founder driven by passion and innovation, building meaningful impact through leadership and creativity. Empowering teams, transforming ideas into reality, and inspiring growth with confidence, resilience, and a strong entrepreneurial spirit.',
+    image: '/images/founders/Picture 1.jpg',
+    linkedin: '#',
+    portfolio: '#',
+    featured: true,
+  },
+  {
+    id: 2,
+    name: 'Murali Venkata Sai Mane',
+    role: 'Founder & CEO',
+    bio: 'Murali Venkata Sai Mane, Founder & CEO, is a visionary leader dedicated to innovation and excellence. With strong determination and strategic thinking, he drives growth, builds impactful solutions, and inspires teams to achieve success with confidence and integrity.',
+    image: '/images/founders/Founder&CEO.png',
+    linkedin: 'https://www.linkedin.com/in/murali-venkat-sai-835289205',
+    portfolio: '#',
+    featured: true,
+  },
+  {
+    id: 3,
+    name: 'Balagam Rohith',
+    role: 'Co-Founder & Managing Director',
+    bio: 'Balagam Rohith, Co-Founder and Managing Director, plays a key role in driving operational excellence and strategic growth. With strong leadership and vision, he focuses on building sustainable success, fostering innovation, and guiding the organization towards impactful achievements.',
+    image: '/images/founders/Co-Founder&Manager.jpg',
+    linkedin: '#',
+    portfolio: '#',
+    featured: true,
+  },
+  {
+    id: 4,
+    name: 'Sudhamsh',
+    role: 'Co-Founder & Managing Director',
+    bio: 'Sudhamsh, Co-Founder and Managing Director, contributes strategic vision and leadership to drive innovation and business growth. With a strong focus on execution and collaboration, he plays a vital role in shaping the organization\'s success and future direction.',
+    image: '/images/founders/Co-founder-Sudhamsh.jpg',
+    linkedin: '#',
+    portfolio: '#',
+    featured: true,
+  },
+];
+
+export const team = [];

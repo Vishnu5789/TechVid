@@ -1,0 +1,118 @@
+export const programCategories = [
+  {
+    id: 'btech',
+    name: 'B.Tech',
+    slug: 'B.Tech',
+    description: 'Engineering programs with hands-on industry experience and cutting-edge curriculum',
+    icon: '🎓',
+    featured: true,
+    programs: [
+      'Artificial Intelligence & Machine Learning (AI & ML)',
+      'Full Stack Web Development',
+      'Cybersecurity',
+      'Data Science',
+    ],
+  },
+  {
+    id: 'degree',
+    name: 'Degree',
+    slug: 'Degree',
+    description: 'Diverse undergraduate programs across multiple disciplines including pharmacy courses',
+    icon: '📚',
+    featured: true,
+    programs: [
+      'Artificial Intelligence & Machine Learning (AI & ML)',
+      'Full Stack Web Development',
+      'Cybersecurity',
+      'Data Science',
+      'Medical Coding',
+      'Pharmacovigilance',
+      'Regulatory Affairs',
+    ],
+  },
+  {
+    id: 'mca',
+    name: 'MCA',
+    slug: 'MCA',
+    description: 'Master of Computer Applications with industry-relevant skills',
+    icon: '💻',
+    featured: true,
+    programs: [
+      'Artificial Intelligence & Machine Learning (AI & ML)',
+      'Full Stack Web Development',
+      'Cybersecurity',
+      'Data Science',
+    ],
+  },
+  {
+    id: 'mba',
+    name: 'MBA',
+    slug: 'MBA',
+    description: 'Advanced business management programs for future leaders',
+    icon: '💼',
+    featured: true,
+    programs: [
+      'Human Resource (HR)',
+      'Digital Marketing',
+      'Finance',
+    ],
+  },
+  {
+    id: 'pharmacy',
+    name: 'Pharmacy',
+    slug: 'Pharmacy',
+    description: 'Comprehensive pharmaceutical education preparing you for healthcare careers',
+    icon: '💊',
+    featured: true,
+    programs: [
+      'Medical Coding',
+      'Pharmacovigilance',
+      'Regulatory Affairs',
+    ],
+  },
+  {
+    id: 'agriculture',
+    name: 'Agriculture',
+    slug: 'Agriculture',
+    description: 'Modern agricultural education for sustainable farming and agribusiness',
+    icon: '🌾',
+    featured: true,
+    programs: [
+      'Artificial Intelligence in Agriculture',
+      'Genetic Engineering',
+    ],
+  },
+];
+
+export const features = [
+  {
+    id: 1,
+    title: 'Real-Time Live Projects',
+    description: 'Students work on real-time live projects that reflect actual industry scenarios. Gain practical exposure and understand how concepts are applied in real working environments.',
+    icon: 'monitor',
+  },
+  {
+    id: 2,
+    title: 'Interactive Online Classes',
+    description: 'High-quality online classes with live mentor interaction. Ask questions, clarify doubts instantly, and access recorded sessions anytime for revision.',
+    icon: 'video',
+  },
+  {
+    id: 3,
+    title: 'From Basic Level to Advanced Level',
+    description: 'Courses designed for everyone - whether you are a beginner or looking to upgrade skills. We start from fundamentals and gradually move to advanced concepts.',
+    icon: 'route',
+  },
+  {
+    id: 4,
+    title: 'Real-Time Industry Experience',
+    description: 'Practical training that gives you real-time industry experience through case studies, assignments, and project-based learning.',
+    icon: 'briefcase',
+  },
+  {
+    id: 5,
+    title: 'Job Assistance & Career Support',
+    description: 'Complete career guidance, resume building, interview preparation, and placement assistance to help you secure job opportunities successfully.',
+    icon: 'award',
+  },
+];
