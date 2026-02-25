@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGlobe, FaChevronLeft, FaChevronRight, FaCheckCircle } from 'react-icons/fa';
 import Card from '../components/common/Card';
@@ -21,7 +22,19 @@ const About = () => {
   };
 
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>About Us - Meet Our Founders | TechVid Innovations</title>
+        <meta name="description" content="Learn about TechVid Innovations, our mission to provide accessible education, and meet our visionary founders. ISO certified educational institution in Hyderabad." />
+        <meta name="keywords" content="TechVid Innovations about, founders, educational institution, ISO certified, Hyderabad tech education, online learning platform" />
+        <link rel="canonical" href="https://www.techvidin.com/about" />
+        <meta property="og:title" content="About TechVid Innovations - Meet Our Founders" />
+        <meta property="og:description" content="Learn about our mission to provide accessible, practical, and transformative education. Meet our visionary founders." />
+        <meta property="og:url" content="https://www.techvidin.com/about" />
+        <meta property="og:image" content="https://www.techvidin.com/images/founders/Founder&CEO.png" />
+      </Helmet>
+      
+      <div>
       {/* Hero Section */}
       <section className="gradient-hero py-20 md:py-32">
         <div className="container-custom text-center text-white">

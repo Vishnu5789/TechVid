@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
@@ -22,7 +23,18 @@ const Services = () => {
   }, [searchParams]);
 
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>{selectedProgram ? `${selectedProgram.name} Programs` : 'Our Programs & Courses'} | TechVid Innovations</title>
+        <meta name="description" content={selectedProgram ? `Explore ${selectedProgram.name} courses: ${selectedProgram.programs.join(', ')}. Industry-ready programs with real-time projects and placement support.` : 'Explore B.Tech, MBA, MCA, Pharmacy, Agriculture programs with real-time projects, interactive classes, and 100% placement support. Enroll in industry-ready courses today.'} />
+        <meta name="keywords" content="B.Tech courses, MBA programs, MCA, Pharmacy courses, Agriculture programs, AI ML, Full Stack Development, Cybersecurity, Data Science, Digital Marketing, HR, Finance, Medical Coding, Pharmacovigilance" />
+        <link rel="canonical" href={`https://www.techvidin.com/services${selectedProgram ? `?program=${selectedProgram.slug}` : ''}`} />
+        <meta property="og:title" content={`${selectedProgram ? selectedProgram.name : 'Our Programs'} | TechVid Innovations`} />
+        <meta property="og:description" content="Industry-ready programs with real-time projects, interactive classes, and placement support." />
+        <meta property="og:url" content={`https://www.techvidin.com/services${selectedProgram ? `?program=${selectedProgram.slug}` : ''}`} />
+      </Helmet>
+      
+      <div>
       {/* Hero Section */}
       <section className="gradient-hero py-20 md:py-32">
         <div className="container-custom text-center text-white">

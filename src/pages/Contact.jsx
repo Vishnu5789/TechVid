@@ -76,9 +76,20 @@ const Contact = () => {
   ];
 
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="gradient-hero py-20 md:py-32">
+    <>
+      <Helmet>
+        <title>Contact Us - Get In Touch | TechVid Innovations Hyderabad</title>
+        <meta name="description" content="Contact TechVid Innovations in Madhapur, Hyderabad. Call +91 98495 40110 or email hr@techvidin.com. Follow us on Instagram and WhatsApp for instant support." />
+        <meta name="keywords" content="contact TechVid, education institute Hyderabad, Madhapur coaching center, online education contact, tech courses enquiry" />
+        <link rel="canonical" href="https://www.techvidin.com/contact" />
+        <meta property="og:title" content="Contact TechVid Innovations" />
+        <meta property="og:description" content="Get in touch with us in Hyderabad. Call, email, or visit our Madhapur office." />
+        <meta property="og:url" content="https://www.techvidin.com/contact" />
+      </Helmet>
+      
+      <div>
+        {/* Hero Section */}
+        <section className="gradient-hero py-20 md:py-32">
         <div className="container-custom text-center text-white">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}

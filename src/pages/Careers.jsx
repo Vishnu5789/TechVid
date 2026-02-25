@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaBriefcase, FaClock } from 'react-icons/fa';
 import Card from '../components/common/Card';
@@ -49,8 +50,19 @@ const Careers = () => {
   };
 
   return (
-    <div>
-      {/* Hero Section */}
+    <>
+      <Helmet>
+        <title>Careers & Job Openings - Join Our Team | TechVid Innovations</title>
+        <meta name="description" content="Join TechVid Innovations team! Current openings: UI/UX Designer, Digital Marketing, Business Development, HR Manager. Apply now for exciting career opportunities in Hyderabad." />
+        <meta name="keywords" content="TechVid careers, job openings Hyderabad, UI UX designer jobs, digital marketing jobs, business development jobs, HR manager jobs, education sector jobs" />
+        <link rel="canonical" href="https://www.techvidin.com/careers" />
+        <meta property="og:title" content="Careers at TechVid Innovations - Join Our Team" />
+        <meta property="og:description" content="Exciting career opportunities in education technology. Join our mission to transform education." />
+        <meta property="og:url" content="https://www.techvidin.com/careers" />
+      </Helmet>
+      
+      <div>
+        {/* Hero Section */}
       <section className="gradient-hero py-20 md:py-32">
         <div className="container-custom text-center text-white">
           <motion.h1
