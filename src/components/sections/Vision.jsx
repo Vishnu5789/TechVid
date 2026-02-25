@@ -7,7 +7,7 @@ const Vision = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, #3B82F6 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, #0B4D73 1px, transparent 1px)',
           backgroundSize: '50px 50px',
         }}></div>
       </div>
