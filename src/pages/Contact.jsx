@@ -335,6 +335,7 @@ const Contact = () => {
         ></iframe>
       </section>
     </div>
+    </>
   );
 };
 
