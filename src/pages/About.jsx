@@ -35,8 +35,8 @@ const About = () => {
       </Helmet>
       
       <div>
-      {/* Hero Section */}
-      <section className="gradient-hero py-20 md:py-32">
+        {/* Hero Section */}
+        <section className="gradient-hero py-20 md:py-32">
         <div className="container-custom text-center text-white">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -352,6 +352,7 @@ const About = () => {
         )}
       </Modal>
     </div>
+    </>
   );
 };
 
