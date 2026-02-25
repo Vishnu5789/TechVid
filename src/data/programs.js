@@ -2,7 +2,7 @@ export const programCategories = [
   {
     id: 'btech',
     name: 'B.Tech',
-    slug: 'B.Tech',
+    slug: 'btech',
     description: 'Engineering programs with hands-on industry experience and cutting-edge curriculum',
     icon: '🎓',
     featured: true,
@@ -16,7 +16,7 @@ export const programCategories = [
   {
     id: 'degree',
     name: 'Degree',
-    slug: 'Degree',
+    slug: 'degree',
     description: 'Diverse undergraduate programs across multiple disciplines including pharmacy courses',
     icon: '📚',
     featured: true,
@@ -33,7 +33,7 @@ export const programCategories = [
   {
     id: 'mca',
     name: 'MCA',
-    slug: 'MCA',
+    slug: 'mca',
     description: 'Master of Computer Applications with industry-relevant skills',
     icon: '💻',
     featured: true,
@@ -47,7 +47,7 @@ export const programCategories = [
   {
     id: 'mba',
     name: 'MBA',
-    slug: 'MBA',
+    slug: 'mba',
     description: 'Advanced business management programs for future leaders',
     icon: '💼',
     featured: true,
@@ -60,7 +60,7 @@ export const programCategories = [
   {
     id: 'pharmacy',
     name: 'Pharmacy',
-    slug: 'Pharmacy',
+    slug: 'pharmacy',
     description: 'Comprehensive pharmaceutical education preparing you for healthcare careers',
     icon: '💊',
     featured: true,
@@ -73,7 +73,7 @@ export const programCategories = [
   {
     id: 'agriculture',
     name: 'Agriculture',
-    slug: 'Agriculture',
+    slug: 'agriculture',
     description: 'Modern agricultural education for sustainable farming and agribusiness',
     icon: '🌾',
     featured: true,
@@ -88,31 +88,31 @@ export const features = [
   {
     id: 1,
     title: 'Real-Time Live Projects',
-    description: 'Students work on real-time live projects that reflect actual industry scenarios. Gain practical exposure and understand how concepts are applied in real working environments.',
+    description: 'At Techvid Innovation, students work on real-time live projects that reflect actual industry scenarios. This helps you gain practical exposure and understand how concepts are applied in real working environments.',
     icon: 'monitor',
   },
   {
     id: 2,
     title: 'Interactive Online Classes',
-    description: 'High-quality online classes with live mentor interaction. Ask questions, clarify doubts instantly, and access recorded sessions anytime for revision.',
+    description: 'We provide high-quality online classes with live mentor interaction. Students can ask questions, clarify doubts instantly, and also access recorded sessions anytime for revision and better understanding.',
     icon: 'video',
   },
   {
     id: 3,
     title: 'From Basic Level to Advanced Level',
-    description: 'Courses designed for everyone - whether you are a beginner or looking to upgrade skills. We start from fundamentals and gradually move to advanced concepts.',
+    description: 'Our courses are designed for everyone — whether you are a beginner or someone looking to upgrade skills. We start from the fundamentals and gradually move to advanced concepts with structured learning paths.',
     icon: 'route',
   },
   {
     id: 4,
     title: 'Real-Time Industry Experience',
-    description: 'Practical training that gives you real-time industry experience through case studies, assignments, and project-based learning.',
+    description: 'We focus on practical training that gives you real-time industry experience. Through case studies, assignments, and project-based learning, students gain the confidence required to work in professional environments.',
     icon: 'briefcase',
   },
   {
     id: 5,
     title: 'Job Assistance & Career Support',
-    description: 'Complete career guidance, resume building, interview preparation, and placement assistance to help you secure job opportunities successfully.',
+    description: 'Techvid Innovation supports students with career guidance, resume building, interview preparation, and placement assistance to help them secure job opportunities successfully.',
     icon: 'award',
   },
 ];

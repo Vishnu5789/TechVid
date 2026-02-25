@@ -34,7 +34,7 @@ const Footer = () => {
               <img 
                 src="/images/logo/logo.jpg" 
                 alt="TechVid Innovations" 
-                className="h-12 object-contain brightness-0 invert"
+                className="h-16 object-contain brightness-0 invert"
               />
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">

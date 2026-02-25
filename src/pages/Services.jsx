@@ -64,6 +64,35 @@ const Services = () => {
             </div>
           )}
 
+          {/* Course List for Selected Program */}
+          {selectedProgram && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-12"
+            >
+              <Card className="p-8">
+                <h2 className="text-3xl font-bold text-dark mb-6">
+                  Courses Offered
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {selectedProgram.programs.map((course, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="flex items-start space-x-3 p-4 bg-light rounded-lg hover:bg-primary/10 transition-colors"
+                    >
+                      <span className="text-primary text-xl font-bold">{index + 1}.</span>
+                      <span className="text-dark font-medium">{course}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </Card>
+            </motion.div>
+          )}
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {programCategories.map((program, index) => (
               <motion.div

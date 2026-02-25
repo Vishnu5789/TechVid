@@ -45,7 +45,7 @@ const Header = () => {
             <img 
               src="/images/logo/logo.jpg" 
               alt="TechVid Innovations" 
-              className="h-12 md:h-14 object-contain"
+              className="h-16 md:h-20 object-contain"
             />
           </Link>
 

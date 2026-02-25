@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaInstagram } from 'react-icons/fa';
 import Card from '../components/common/Card';
 import Input from '../components/common/Input';
 import Textarea from '../components/common/Textarea';
@@ -228,22 +228,34 @@ const Contact = () => {
               className="space-y-8"
             >
               <div>
-                <h3 className="text-2xl font-bold text-dark mb-4">Need More Help?</h3>
+                <h3 className="text-2xl font-bold text-dark mb-4">Connect With Us</h3>
                 <p className="text-dark-light mb-6">
-                  If you need immediate assistance, you can reach us directly through WhatsApp.
-                  Our team is available to answer your questions and provide support.
+                  Reach out to us directly through WhatsApp or follow us on Instagram for updates and insights.
                 </p>
-                <a
-                  href={`https://wa.me/${contactInfo.whatsapp.replace(/\s+/g, '')}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block"
-                >
-                  <Button variant="secondary" size="lg" className="bg-success hover:bg-success/90">
-                    <FaWhatsapp className="mr-2" size={24} />
-                    Send to WhatsApp
-                  </Button>
-                </a>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a
+                    href={`https://wa.me/${contactInfo.whatsapp.replace(/\s+/g, '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Button variant="secondary" size="lg" className="bg-success hover:bg-success/90 w-full sm:w-auto">
+                      <FaWhatsapp className="mr-2" size={24} />
+                      WhatsApp
+                    </Button>
+                  </a>
+                  <a
+                    href={contactInfo.social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Button variant="secondary" size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 w-full sm:w-auto">
+                      <FaInstagram className="mr-2" size={24} />
+                      Instagram
+                    </Button>
+                  </a>
+                </div>
               </div>
 
               <Card>
@@ -251,6 +263,28 @@ const Contact = () => {
                 <div className="space-y-2 text-dark-light">
                   <p><strong>Tuesday - Sunday:</strong> 10:30 AM - 7:30 PM</p>
                   <p><strong>Monday:</strong> Closed</p>
+                </div>
+              </Card>
+
+              <Card>
+                <h3 className="text-xl font-bold text-dark mb-4">Visit Us</h3>
+                <div className="space-y-4">
+                  <p className="text-dark-light">
+                    {contactInfo.address.line1}<br />
+                    {contactInfo.address.line2}<br />
+                    {contactInfo.address.line3}
+                  </p>
+                  <a
+                    href={contactInfo.location}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Button variant="outline" size="md" className="w-full sm:w-auto">
+                      <FaMapMarkerAlt className="mr-2" />
+                      Get Directions
+                    </Button>
+                  </a>
                 </div>
               </Card>
 
