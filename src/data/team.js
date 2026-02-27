@@ -52,7 +52,7 @@ export const team = [
   {
     id: 2,
     name: 'Chandini Attili',
-    role: 'HR Executive',
+    role: 'Senior HR Executive',
     image: '/images/our-team/Chandini Attili.png',
     linkedin: 'https://www.linkedin.com/in/attili-chandini-32409322b',
   },
@@ -63,4 +63,25 @@ export const team = [
     image: '/images/our-team/Aparna vushagoni.png',
     linkedin: '#',
   },
+  {
+    id: 4,
+    name: 'Medinti Meghana',
+    role: 'Senior Manager',
+    image: '#',
+    linkedin: '#',
+  },
+  {
+    id: 5,
+    name: 'Kousalya',
+    role: 'Associate Senior Manager',
+    image: '#',
+    linkedin: '#',
+  },
+  {
+    id: 6,
+    name: 'Samyukta',
+    role: 'Leadgen Manager',
+    image: '#',
+    linkedin: '#',
+  }
 ];

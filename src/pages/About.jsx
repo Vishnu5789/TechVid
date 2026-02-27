@@ -176,12 +176,16 @@ const About = () => {
                 >
                   <Card hover>
                     <div className="text-center">
-                      <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary bg-gray-100">
-                        <img 
-                          src={member.image} 
-                          alt={member.name}
-                          className="w-full h-full object-cover object-[center_22%] scale-71"
-                        />
+                      <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary bg-gray-100 flex items-center justify-center">
+                        {member.image !== '#' ? (
+                          <img 
+                            src={member.image} 
+                            alt={member.name}
+                            className="w-full h-full object-cover object-[center_22%] scale-71"
+                          />
+                        ) : (
+                          <div className="text-6xl">👤</div>
+                        )}
                       </div>
                       <h3 className="text-xl font-bold text-dark mb-2">{member.name}</h3>
                       <p className="text-dark-light mb-4">{member.role}</p>
