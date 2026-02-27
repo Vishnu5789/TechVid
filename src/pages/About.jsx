@@ -113,7 +113,7 @@ const About = () => {
                       <img 
                         src={founder.image} 
                         alt={founder.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover object-[center_22%] scale-80"
                       />
                     </div>
                     <h3 className="text-2xl font-bold text-dark mb-2">{founder.name}</h3>
@@ -176,19 +176,25 @@ const About = () => {
                 >
                   <Card hover>
                     <div className="text-center">
-                      <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center text-white text-3xl font-bold">
-                        {member.name.split(' ').map(n => n[0]).join('')}
+                      <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-primary bg-gray-100">
+                        <img 
+                          src={member.image} 
+                          alt={member.name}
+                          className="w-full h-full object-cover object-[center_22%] scale-71"
+                        />
                       </div>
                       <h3 className="text-xl font-bold text-dark mb-2">{member.name}</h3>
                       <p className="text-dark-light mb-4">{member.role}</p>
-                      <a
-                        href={member.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-primary hover:text-primary-600 transition-colors"
-                      >
-                        <FaLinkedin className="mr-2" /> Connect
-                      </a>
+                      {member.linkedin !== '#' && (
+                        <a
+                          href={member.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-primary hover:text-primary-600 transition-colors"
+                        >
+                          <FaLinkedin className="mr-2" /> Connect
+                        </a>
+                      )}
                     </div>
                   </Card>
                 </motion.div>

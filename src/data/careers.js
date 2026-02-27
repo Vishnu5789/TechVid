@@ -1,14 +1,22 @@
 export const jobOpenings = [
   {
     id: 1,
-    title: 'UI/UX Designer',
-    department: 'Design',
+    title: 'Team Lead',
+    department: 'Management',
     location: 'Hyderabad, Telangana',
     type: 'Full-time',
-    description: 'Create beautiful and intuitive user experiences for our learning platform.',
+    description: 'Lead and mentor a team of professionals to achieve organizational goals and drive innovation.',
   },
   {
     id: 2,
+    title: 'Senior Manager',
+    department: 'Management',
+    location: 'Hyderabad, Telangana',
+    type: 'Full-time',
+    description: 'Oversee operations, strategic planning, and team management to ensure business excellence.',
+  },
+  {
+    id: 3,
     title: 'Digital Marketing',
     department: 'Marketing',
     location: 'Hyderabad, Telangana / Remote',
@@ -16,7 +24,7 @@ export const jobOpenings = [
     description: 'Drive growth through innovative digital marketing campaigns.',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Business Development Intern',
     department: 'Business Development',
     location: 'Hyderabad, Telangana',
@@ -24,20 +32,12 @@ export const jobOpenings = [
     description: 'Help expand our reach and build partnerships with educational institutions.',
   },
   {
-    id: 4,
+    id: 5,
     title: 'HR Manager',
     department: 'Human Resources',
     location: 'Hyderabad, Telangana',
     type: 'Full-time',
     description: 'Manage talent acquisition and employee relations.',
-  },
-  {
-    id: 5,
-    title: 'Associated Senior Manager',
-    department: 'Management',
-    location: 'Hyderabad, Telangana',
-    type: 'Full-time',
-    description: 'Lead strategic initiatives and manage cross-functional teams.',
   },
 ];
 

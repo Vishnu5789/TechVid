@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import Card from '../components/common/Card';
 import Input from '../components/common/Input';
 import Textarea from '../components/common/Textarea';
@@ -63,7 +63,12 @@ const Contact = () => {
     {
       icon: FaPhone,
       title: 'Call Now',
-      content: contactInfo.phone,
+      content: (
+        <>
+          {contactInfo.phone}<br />
+          {contactInfo.phone2}
+        </>
+      ),
       link: `tel:${contactInfo.phone}`,
       color: 'text-secondary',
     },
@@ -242,7 +247,7 @@ const Contact = () => {
               <div>
                 <h3 className="text-2xl font-bold text-dark mb-4">Connect With Us</h3>
                 <p className="text-dark-light mb-6">
-                  Reach out to us directly through WhatsApp or follow us on Instagram for updates and insights.
+                  Reach out to us directly through WhatsApp, follow us on Instagram, or connect with us on LinkedIn.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
@@ -265,6 +270,17 @@ const Contact = () => {
                     <Button variant="secondary" size="lg" className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 w-full sm:w-auto">
                       <FaInstagram className="mr-2" size={24} />
                       Instagram
+                    </Button>
+                  </a>
+                  <a
+                    href={contactInfo.social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block"
+                  >
+                    <Button variant="secondary" size="lg" className="bg-primary hover:bg-primary-600 w-full sm:w-auto">
+                      <FaLinkedin className="mr-2" size={24} />
+                      LinkedIn
                     </Button>
                   </a>
                 </div>

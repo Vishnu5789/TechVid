@@ -1,5 +1,6 @@
 export const contactInfo = {
   phone: '+91 98495 40110',
+  phone2: '+91 91120 48888',
   email: 'hr@techvidin.com',
   address: {
     line1: '1st Floor, TECHVID INNOVATIONS, Baby Koo, R.R.Towers,',
@@ -13,7 +14,7 @@ export const contactInfo = {
     closed: 'Monday: Closed',
   },
   social: {
-    linkedin: '#',
+    linkedin: 'https://www.linkedin.com/company/techvid-innovations-pvt-ltd/about/',
     twitter: '#',
     facebook: '#',
     instagram: 'https://www.instagram.com/techvid_innovations?igsh=cDZpb21qOWUwbzhu',

@@ -16,13 +16,11 @@ const CTA = () => {
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              {/* Placeholder for actual image */}
-              <div className="aspect-square bg-white/10 backdrop-blur-lg p-8 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="text-8xl mb-4">📚</div>
-                  <p className="text-2xl font-semibold">Student Success</p>
-                </div>
-              </div>
+              <img 
+                src="/images/home-page/student-success.png" 
+                alt="Student Success" 
+                className="w-full h-full object-cover"
+              />
             </div>
             
             {/* Decorative Elements */}

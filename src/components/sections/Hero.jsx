@@ -5,7 +5,7 @@ import Button from '../common/Button';
 
 const Hero = () => {
   return (
-    <section className="relative gradient-hero min-h-screen flex items-center overflow-hidden">
+    <section className="relative gradient-hero min-h-screen flex items-center overflow-hidden pt-32 md:pt-40">
       {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -98,9 +98,9 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="hidden lg:flex items-center justify-center"
+            className="flex items-center justify-center"
           >
-            <div className="relative w-full max-w-lg">
+            <div className="relative w-full max-w-2xl">
               <motion.div
                 animate={{
                   y: [0, -20, 0],
@@ -110,16 +110,13 @@ const Hero = () => {
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
-                className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-2xl"
+                className="relative rounded-3xl overflow-hidden shadow-2xl"
               >
-                <div className="space-y-6">
-                  <div className="h-12 bg-white/20 rounded-lg animate-pulse"></div>
-                  <div className="h-32 bg-white/20 rounded-lg animate-pulse delay-75"></div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="h-24 bg-white/20 rounded-lg animate-pulse delay-100"></div>
-                    <div className="h-24 bg-white/20 rounded-lg animate-pulse delay-150"></div>
-                  </div>
-                </div>
+                <img 
+                  src="/images/home-page/industry-ready-image.png" 
+                  alt="Industry-Ready Skills" 
+                  className="w-full h-auto"
+                />
               </motion.div>
               
               {/* Decorative Elements */}

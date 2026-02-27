@@ -41,4 +41,26 @@ export const founders = [
   },
 ];
 
-export const team = [];
+export const team = [
+  {
+    id: 1,
+    name: 'Jhansi Priya Goud',
+    role: 'Senior HR Manager',
+    image: '/images/our-team/Jhansi Priya Goud.png',
+    linkedin: 'https://www.linkedin.com/in/jhansipriya-guthulla-629000278',
+  },
+  {
+    id: 2,
+    name: 'Chandini Attili',
+    role: 'HR Executive',
+    image: '/images/our-team/Chandini Attili.png',
+    linkedin: 'https://www.linkedin.com/in/attili-chandini-32409322b',
+  },
+  {
+    id: 3,
+    name: 'Aparna Vushagoni',
+    role: 'Senior Manager',
+    image: '/images/our-team/Aparna vushagoni.png',
+    linkedin: '#',
+  },
+];
