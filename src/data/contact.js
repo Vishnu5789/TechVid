@@ -1,13 +1,12 @@
 export const contactInfo = {
-  phone: '+91 98495 40110',
-  phone2: '+91 91120 48888',
+  phone: '+91 9112048888',
   email: 'hr@techvidin.com',
   address: {
     line1: '1st Floor, TECHVID INNOVATIONS, Baby Koo, R.R.Towers,',
     line2: 'Madhapur, Hyderabad,',
     line3: 'Telangana, 500081',
   },
-  whatsapp: '+91 9849540110',
+  whatsapp: '+91 9112048888',
   location: 'https://maps.google.com/?q=17.436697,78.394005',
   officeHours: {
     weekdays: 'Tuesday - Sunday: 10:30 AM - 7:30 PM',
