@@ -4,7 +4,7 @@ export const founders = [
     name: 'Anitha Ainavolu',
     role: 'Founder',
     bio: 'A visionary lady founder driven by passion and innovation, building meaningful impact through leadership and creativity. Empowering teams, transforming ideas into reality, and inspiring growth with confidence, resilience, and a strong entrepreneurial spirit.',
-    image: '/images/founders/Picture 1.jpg',
+    image: '/images/founders/Picture 1.png',
     linkedin: '#',
     portfolio: '#',
     featured: true,

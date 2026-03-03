@@ -26,7 +26,7 @@ const Services = () => {
     <>
       <Helmet>
         <title>{selectedProgram ? `${selectedProgram.name} Programs` : 'Our Programs & Courses'} | TechVid Innovations</title>
-        <meta name="description" content={selectedProgram ? `Explore ${selectedProgram.name} courses: ${selectedProgram.programs.join(', ')}. Industry-ready programs with real-time projects and placement support.` : 'Explore B.Tech, MBA, MCA, Pharmacy, Agriculture programs with real-time projects, interactive classes, and 100% placement support. Enroll in industry-ready courses today.'} />
+        <meta name="description" content={selectedProgram ? `Explore ${selectedProgram.name} courses: ${selectedProgram.programs.map(p => p.name).join(', ')}. Industry-ready programs with real-time projects and placement support.` : 'Explore B.Tech, MBA, MCA, Pharmacy, Agriculture programs with real-time projects, interactive classes, and 100% placement support. Enroll in industry-ready courses today.'} />
         <meta name="keywords" content="B.Tech courses, MBA programs, MCA, Pharmacy courses, Agriculture programs, AI ML, Full Stack Development, Cybersecurity, Data Science, Digital Marketing, HR, Finance, Medical Coding, Pharmacovigilance" />
         <link rel="canonical" href={`https://www.techvidin.com/services${selectedProgram ? `?program=${selectedProgram.slug}` : ''}`} />
         <meta property="og:title" content={`${selectedProgram ? selectedProgram.name : 'Our Programs'} | TechVid Innovations`} />
@@ -76,32 +76,63 @@ const Services = () => {
             </div>
           )}
 
-          {/* Course List for Selected Program */}
+          {/* Course Cards for Selected Program */}
           {selectedProgram && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="mb-12"
             >
-              <Card className="p-8">
-                <h2 className="text-3xl font-bold text-dark mb-6">
-                  Courses Offered
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {selectedProgram.programs.map((course, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="flex items-start space-x-3 p-4 bg-light rounded-lg hover:bg-primary/10 transition-colors"
-                    >
-                      <span className="text-primary text-xl font-bold">{index + 1}.</span>
-                      <span className="text-dark font-medium">{course}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </Card>
+              <h2 className="text-3xl md:text-4xl font-bold text-dark mb-8 text-center">
+                Available Courses
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {selectedProgram.programs.map((course, index) => (
+                  <motion.div
+                    key={course.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <Card hover className="h-full flex flex-col">
+                      <div className="relative h-48 mb-4 rounded-lg overflow-hidden bg-gray-100">
+                        <img 
+                          src={course.image} 
+                          alt={course.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      
+                      <div className="flex-1 flex flex-col">
+                        <h3 className="text-xl font-bold text-dark mb-3">{course.name}</h3>
+                        <p className="text-dark-light mb-4 text-sm flex-1">{course.description}</p>
+                        
+                        <div className="space-y-3">
+                          <div className="flex justify-between items-center">
+                            <span className="text-dark-light text-sm">Duration:</span>
+                            <span className="font-semibold text-dark">{course.duration}</span>
+                          </div>
+                          
+                          <div className="flex justify-between items-center border-t pt-3">
+                            <span className="text-dark-light">Course Fee:</span>
+                            <span className="text-2xl font-bold text-primary">₹{course.price.toLocaleString('en-IN')}</span>
+                          </div>
+                          
+                          <Button 
+                            variant="primary" 
+                            size="md" 
+                            className="w-full group"
+                            onClick={() => navigate('/contact')}
+                          >
+                            Enroll Now
+                            <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                          </Button>
+                        </div>
+                      </div>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           )}
 

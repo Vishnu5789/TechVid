@@ -303,7 +303,7 @@ const About = () => {
                   size="sm"
                   onClick={() => setSelectedCertificate(certificates[currentCertificate])}
                 >
-                  Verify Certificate
+                  View Full Certificate
                 </Button>
               </div>
 
@@ -345,19 +345,38 @@ const About = () => {
         isOpen={!!selectedCertificate}
         onClose={() => setSelectedCertificate(null)}
         title={selectedCertificate?.title}
-        size="lg"
+        size="xl"
       >
         {selectedCertificate && (
-          <div className="text-center">
-            <p className="text-dark-light mb-4">
-              Certificate verification will open in a new window
-            </p>
-            <Button
-              variant="primary"
-              onClick={() => window.open(selectedCertificate.verifyLink, '_blank')}
-            >
-              Open Verification Link
-            </Button>
+          <div className="space-y-6">
+            <div className="w-full rounded-lg overflow-hidden bg-white shadow-lg">
+              <img 
+                src={selectedCertificate.image}
+                alt={selectedCertificate.title}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+            {selectedCertificate.company && (
+              <p className="text-center text-lg text-dark-light">
+                {selectedCertificate.company}
+              </p>
+            )}
+            <div className="flex justify-center gap-4">
+              {selectedCertificate.verifyLink !== '#' && (
+                <Button
+                  variant="primary"
+                  onClick={() => window.open(selectedCertificate.verifyLink, '_blank')}
+                >
+                  Verify Certificate Online
+                </Button>
+              )}
+              <Button
+                variant="outline"
+                onClick={() => setSelectedCertificate(null)}
+              >
+                Close
+              </Button>
+            </div>
           </div>
         )}
       </Modal>

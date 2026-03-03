@@ -1,23 +1,30 @@
 export const certificates = [
   {
     id: 1,
-    title: 'Company Registration Certificate',
+    title: 'Certificate of Incorporation',
     company: 'TECHVID INNOVATIONS',
-    image: '/images/certificates/registration.jpg',
+    image: '/images/certificates/incorporation.png',
     verifyLink: '#',
   },
   {
     id: 2,
-    title: 'ISO 9001:2015 Certificate',
+    title: 'PAN Card',
     company: 'TECHVID INNOVATIONS',
-    image: '/images/certificates/iso-9001.jpg',
+    image: '/images/certificates/PAN.png',
     verifyLink: '#',
   },
   {
     id: 3,
-    title: 'Educational License',
+    title: 'GST Registration Certificate',
     company: 'TECHVID INNOVATIONS',
-    image: '/images/certificates/educational-license.jpg',
+    image: '/images/certificates/tax.png',
+    verifyLink: '#',
+  },
+  {
+    id: 4,
+    title: 'Certificate of Participation',
+    company: 'TECHVID INNOVATIONS',
+    image: '/images/certificates/participation.png',
     verifyLink: '#',
   },
 ];
