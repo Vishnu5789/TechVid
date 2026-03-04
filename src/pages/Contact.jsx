@@ -33,8 +33,21 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitMessage('');
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/send-contact-message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
       setIsSubmitting(false);
       setSubmitMessage('Message sent successfully! We will get back to you soon.');
       setFormData({
@@ -44,7 +57,10 @@ const Contact = () => {
         subject: '',
         message: '',
       });
-    }, 2000);
+    } catch (error) {
+      setIsSubmitting(false);
+      setSubmitMessage(`Error: ${error.message}. Please try again or contact us directly.`);
+    }
   };
 
   const contactCards = [
