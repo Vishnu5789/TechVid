@@ -13,7 +13,7 @@ export const programCategories = [
         description: 'Master AI and ML concepts with real-world projects, deep learning, neural networks, and cutting-edge technologies.',
         image: '/images/courses/ai-ml.png',
         price: 15000,
-        duration: '6 months',
+        duration: '3 months',
       },
       {
         id: 'btech-fullstack',
@@ -21,7 +21,7 @@ export const programCategories = [
         description: 'Learn both frontend and backend development with modern frameworks, databases, and deployment strategies.',
         image: '/images/courses/full-stack.png',
         price: 15000,
-        duration: '6 months',
+        duration: '3 months',
       },
       {
         id: 'btech-cybersecurity',
@@ -29,7 +29,7 @@ export const programCategories = [
         description: 'Comprehensive security training covering ethical hacking, network security, and threat prevention.',
         image: '/images/courses/cyber-security.png',
         price: 15000,
-        duration: '6 months',
+        duration: '3 months',
       },
       {
         id: 'btech-datascience',
@@ -37,7 +37,7 @@ export const programCategories = [
         description: 'Data analysis, visualization, statistical modeling, and machine learning for data-driven decisions.',
         image: '/images/courses/data-science.png',
         price: 15000,
-        duration: '6 months',
+        duration: '3 months',
       },
     ],
   },
@@ -55,7 +55,7 @@ export const programCategories = [
         description: 'Master AI and ML concepts with real-world projects, deep learning, neural networks, and cutting-edge technologies.',
         image: '/images/courses/ai-ml.png',
         price: 15000,
-        duration: '6 months',
+        duration: '3 months',
       },
       {
         id: 'degree-fullstack',
@@ -63,7 +63,7 @@ export const programCategories = [
         description: 'Learn both frontend and backend development with modern frameworks, databases, and deployment strategies.',
         image: '/images/courses/full-stack.png',
         price: 15000,
-        duration: '6 months',
+        duration: '3 months',
       },
       {
         id: 'degree-cybersecurity',
@@ -71,7 +71,7 @@ export const programCategories = [
         description: 'Comprehensive security training covering ethical hacking, network security, and threat prevention.',
         image: '/images/courses/cyber-security.png',
         price: 15000,
-        duration: '6 months',
+        duration: '3 months',
       },
       {
         id: 'degree-datascience',
@@ -79,7 +79,7 @@ export const programCategories = [
         description: 'Data analysis, visualization, statistical modeling, and machine learning for data-driven decisions.',
         image: '/images/courses/data-science.png',
         price: 15000,
-        duration: '6 months',
+        duration: '3 months',
       },
       {
         id: 'degree-medicalcoding',
@@ -121,7 +121,7 @@ export const programCategories = [
         description: 'Master AI and ML concepts with real-world projects, deep learning, neural networks, and cutting-edge technologies.',
         image: '/images/courses/ai-ml.png',
         price: 15000,
-        duration: '6 months',
+        duration: '3 months',
       },
       {
         id: 'mca-fullstack',
@@ -129,7 +129,7 @@ export const programCategories = [
         description: 'Learn both frontend and backend development with modern frameworks, databases, and deployment strategies.',
         image: '/images/courses/full-stack.png',
         price: 15000,
-        duration: '6 months',
+        duration: '3 months',
       },
       {
         id: 'mca-cybersecurity',
@@ -137,7 +137,7 @@ export const programCategories = [
         description: 'Comprehensive security training covering ethical hacking, network security, and threat prevention.',
         image: '/images/courses/cyber-security.png',
         price: 15000,
-        duration: '6 months',
+        duration: '3 months',
       },
       {
         id: 'mca-datascience',
@@ -145,7 +145,7 @@ export const programCategories = [
         description: 'Data analysis, visualization, statistical modeling, and machine learning for data-driven decisions.',
         image: '/images/courses/data-science.png',
         price: 15000,
-        duration: '6 months',
+        duration: '3 months',
       },
     ],
   },

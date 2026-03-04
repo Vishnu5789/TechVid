@@ -46,7 +46,7 @@ export const team = [
     id: 1,
     name: 'Jhansi Priya Goud',
     role: 'Senior HR Manager',
-    image: '/images/our-team/Jhansi Priya Goud.png',
+    image: '/images/our-team/Jhansi Priya Goud.jpeg',
     linkedin: 'https://www.linkedin.com/in/jhansipriya-guthulla-629000278',
   },
   {
