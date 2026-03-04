@@ -1,25 +1,58 @@
 import { Resend } from 'resend';
 
 export default async function handler(req, res) {
+  console.log('========================================');
+  console.log('💼 JOB APPLICATION API CALLED');
+  console.log('Time:', new Date().toISOString());
+  console.log('Method:', req.method);
+  console.log('========================================');
+
   // Only allow POST requests
   if (req.method !== 'POST') {
+    console.log('❌ ERROR: Method not allowed. Expected POST, got:', req.method);
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
     const { name, email, phone, position, message, resume } = req.body;
+    
+    console.log('📝 Application Data Received:');
+    console.log('  - Name:', name);
+    console.log('  - Email:', email);
+    console.log('  - Phone:', phone);
+    console.log('  - Position:', position);
+    console.log('  - Cover Letter:', message ? `${message.substring(0, 50)}...` : 'N/A');
+    console.log('  - Resume:', resume ? 'Attached' : 'Not attached');
 
     // Validation
     if (!name || !email || !phone || !position) {
+      console.log('❌ VALIDATION ERROR: Missing required fields');
+      console.log('  - Name present:', !!name);
+      console.log('  - Email present:', !!email);
+      console.log('  - Phone present:', !!phone);
+      console.log('  - Position present:', !!position);
       return res.status(400).json({ error: 'Name, email, phone, and position are required' });
     }
 
+    console.log('✅ Validation passed');
+
+    // Check API key
+    const apiKey = process.env.RESEND_API_KEY;
+    if (!apiKey) {
+      console.log('❌ CRITICAL ERROR: RESEND_API_KEY not found in environment variables');
+      return res.status(500).json({ error: 'Email service not configured. Please contact administrator.' });
+    }
+    
+    console.log('✅ API Key found:', apiKey.substring(0, 10) + '...');
+
     // Initialize Resend with API key
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    console.log('🔄 Initializing Resend...');
+    const resend = new Resend(apiKey);
 
     // Send email to HR
-    const { data, error } = await resend.emails.send({
-      from: 'TechVid Careers <admin@techvidin.com>', // You'll change this to your domain later
+    console.log('📨 Sending job application email to hr@techvidin.com...');
+    const emailPayload = {
+      from: 'TechVid Careers <admin@techvidin.com>',
       to: 'hr@techvidin.com',
       replyTo: email,
       subject: `New Job Application: ${position} - ${name}`,
@@ -57,12 +90,29 @@ export default async function handler(req, res) {
           </div>
         </div>
       `,
-    });
+    };
+    
+    console.log('📧 Email payload prepared:');
+    console.log('  - From:', emailPayload.from);
+    console.log('  - To:', emailPayload.to);
+    console.log('  - Subject:', emailPayload.subject);
+    
+    const { data, error } = await resend.emails.send(emailPayload);
 
     if (error) {
-      console.error('Resend error:', error);
-      return res.status(500).json({ error: 'Failed to send email' });
+      console.log('❌ RESEND API ERROR:');
+      console.error('Error details:', JSON.stringify(error, null, 2));
+      console.log('Error message:', error.message);
+      return res.status(500).json({ 
+        error: 'Failed to send email',
+        details: error.message 
+      });
     }
+
+    console.log('✅ JOB APPLICATION EMAIL SENT SUCCESSFULLY!');
+    console.log('Email ID:', data.id);
+    console.log('Response data:', JSON.stringify(data, null, 2));
+    console.log('========================================');
 
     // Success response
     return res.status(200).json({ 
@@ -72,7 +122,14 @@ export default async function handler(req, res) {
     });
 
   } catch (error) {
-    console.error('Server error:', error);
-    return res.status(500).json({ error: 'Internal server error' });
+    console.log('❌ CRITICAL SERVER ERROR:');
+    console.error('Error type:', error.constructor.name);
+    console.error('Error message:', error.message);
+    console.error('Error stack:', error.stack);
+    console.log('========================================');
+    return res.status(500).json({ 
+      error: 'Internal server error',
+      details: error.message 
+    });
   }
 }

@@ -34,8 +34,32 @@ const Careers = () => {
     setIsSubmitting(true);
     setSubmitMessage('');
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // For now, we'll send without file upload
+      // File upload will be added with ImageKit integration
+      const applicationData = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        position: formData.position,
+        message: formData.coverLetter,
+        resume: formData.resume ? 'File attached (upload pending)' : 'No resume attached'
+      };
+
+      const response = await fetch('/api/send-job-application', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(applicationData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to submit application');
+      }
+
       setIsSubmitting(false);
       setSubmitMessage('Application submitted successfully! We will contact you soon.');
       setFormData({
@@ -46,7 +70,10 @@ const Careers = () => {
         resume: null,
         coverLetter: '',
       });
-    }, 2000);
+    } catch (error) {
+      setIsSubmitting(false);
+      setSubmitMessage(`Error: ${error.message}. Please try again or contact us directly.`);
+    }
   };
 
   return (
