@@ -153,7 +153,7 @@ const Footer = () => {
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm text-center md:text-left">
-              Copyright © 2024 TechVid. All rights reserved
+              Copyright © 2026 TechVid. All rights reserved
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               {legalLinks.map((link) => (
