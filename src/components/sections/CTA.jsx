@@ -57,7 +57,9 @@ const CTA = () => {
               className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight"
             >
               Education is not just a service -{' '}
-              <span className="text-accent">it's our Responsibility</span>
+              <span className="text-[#1a237e]">
+  it's our Responsibility
+</span>
             </motion.h2>
 
             <motion.p
