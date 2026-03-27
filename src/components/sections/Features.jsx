@@ -69,36 +69,8 @@ const Features = () => {
           viewport={{ once: true }}
           className="text-center mt-16 mb-8"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
-            Our Collaborations
-          </h2>
-          <p className="text-dark-light">
-            We proudly collaborate with leading organizations and institutions
-          </p>
+      
         </motion.div>
-
-        {/* COLLABORATION LOGOS - ALWAYS COLOR */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center">
-
-          <img src="/images/our-partners/p1.png" alt="partner1"
-            className="w-full h-16 object-contain" />
-
-          <img src="/images/our-partners/p2.png" alt="partner2"
-            className="w-full h-16 object-contain" />
-
-          <img src="/images/our-partners/p3.png" alt="partner3"
-            className="w-full h-16 object-contain" />
-
-          <img src="/images/our-partners/p4.png" alt="partner4"
-            className="w-full h-16 object-contain" />
-
-          <img src="/images/our-partners/p5.png" alt="partner5"
-            className="w-full h-16 object-contain" />
-
-          <img src="/images/our-partners/p6.png" alt="partner6"
-            className="w-full h-16 object-contain" />
-
-        </div>
 
       </div>
     </section>
