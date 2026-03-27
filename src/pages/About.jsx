@@ -255,91 +255,106 @@ const About = () => {
       )}
 
       {/* Certificates */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
-              WE ARE LEGALLY CERTIFIED
-            </h2>
-            <p className="text-lg text-dark-light">
-              Recognized and certified by government and international bodies
-            </p>
-          </motion.div>
+     <section className="section-padding bg-white">
+     <div className="container-custom">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className="text-center mb-12"
+    >
+      <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
+        WE ARE LEGALLY CERTIFIED
+      </h2>
+      <p className="text-lg text-dark-light">
+        Recognized and certified by government and international bodies
+      </p>
+    </motion.div>
 
-          <div className="max-w-3xl mx-auto">
-            <Card className="relative">
-              <div className="text-center">
-                <div className="mb-6">
-                  <div className="w-full h-64 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center mb-4">
-                    <FaCheckCircle className="text-6xl text-success" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-dark mb-2">
-                    {certificates[currentCertificate].title}
-                  </h3>
-                  {certificates[currentCertificate].company && (
-                    <p className="text-dark-light mb-2">
-                      {certificates[currentCertificate].company}
-                    </p>
-                  )}
-                  {certificates[currentCertificate].number && (
-                    <p className="text-dark-light mb-2">
-                      Number: {certificates[currentCertificate].number}
-                    </p>
-                  )}
-                  {certificates[currentCertificate].reference && (
-                    <p className="text-dark-light mb-2">
-                      Reference: {certificates[currentCertificate].reference}
-                    </p>
-                  )}
-                </div>
-
-                <Button
-                  variant="primary"
-                  size="sm"
-                  onClick={() => setSelectedCertificate(certificates[currentCertificate])}
-                >
-                  View Full Certificate
-                </Button>
-              </div>
-
-              {/* Navigation Arrows */}
-              <div className="flex justify-between items-center mt-8">
-                <button
-                  onClick={prevCertificate}
-                  className="p-3 rounded-full bg-light hover:bg-primary hover:text-white transition-colors"
-                >
-                  <FaChevronLeft />
-                </button>
-                <div className="flex gap-2">
-                  {certificates.map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentCertificate(index)}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        index === currentCertificate
-                          ? 'bg-primary w-8'
-                          : 'bg-gray-300'
-                      }`}
-                    />
-                  ))}
-                </div>
-                <button
-                  onClick={nextCertificate}
-                  className="p-3 rounded-full bg-light hover:bg-primary hover:text-white transition-colors"
-                >
-                  <FaChevronRight />
-                </button>
-              </div>
-            </Card>
-          </div>
+    <div className="max-w-4xl mx-auto">
+      <Card className="relative p-6">
+        
+        {/* ✅ IMAGE DISPLAY FIXED */}
+        <div className="w-full bg-white rounded-lg overflow-hidden mb-6 flex items-center justify-center">
+          <img
+            src={certificates[currentCertificate].image}
+            alt={certificates[currentCertificate].title}
+            className="w-full max-h-[450px] object-contain rounded-lg shadow-lg transition duration-300 hover:scale-105"
+          />
         </div>
-      </section>
 
+        {/* Certificate Info */}
+        <div className="text-center">
+          <h3 className="text-2xl font-bold text-dark mb-2">
+            {certificates[currentCertificate].title}
+          </h3>
+
+          {certificates[currentCertificate].company && (
+            <p className="text-dark-light mb-2">
+              {certificates[currentCertificate].company}
+            </p>
+          )}
+
+          {certificates[currentCertificate].number && (
+            <p className="text-dark-light mb-2">
+              Number: {certificates[currentCertificate].number}
+            </p>
+          )}
+
+          {certificates[currentCertificate].reference && (
+            <p className="text-dark-light mb-2">
+              Reference: {certificates[currentCertificate].reference}
+            </p>
+          )}
+        </div>
+
+        {/* View Button */}
+        <div className="text-center mt-4">
+          <Button
+            variant="primary"
+            size="sm"
+            onClick={() =>
+              setSelectedCertificate(certificates[currentCertificate])
+            }
+          >
+            View Full Certificate
+          </Button>
+        </div>
+
+        {/* Navigation */}
+        <div className="flex justify-between items-center mt-8">
+          <button
+            onClick={prevCertificate}
+            className="p-3 rounded-full bg-light hover:bg-primary hover:text-white transition-colors"
+          >
+            <FaChevronLeft />
+          </button>
+
+          <div className="flex gap-2">
+            {certificates.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentCertificate(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  index === currentCertificate
+                    ? 'bg-primary w-8'
+                    : 'bg-gray-300'
+                }`}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={nextCertificate}
+            className="p-3 rounded-full bg-light hover:bg-primary hover:text-white transition-colors"
+          >
+            <FaChevronRight />
+          </button>
+        </div>
+      </Card>
+    </div>
+  </div>
+</section>
       {/* Certificate Modal */}
       <Modal
         isOpen={!!selectedCertificate}

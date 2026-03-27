@@ -62,7 +62,7 @@ const Hero = () => {
               className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
               Transform Your Future with{' '}
-              <span className="text-accent">Industry-Ready Skills</span>
+              <span className="text-[#1a237e]">Industry-Ready Skills</span>
             </motion.h1>
 
             <motion.p
