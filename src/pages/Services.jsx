@@ -5,12 +5,17 @@ import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
-import { programCategories, features } from '../data/programs';
+import { programCategories, features, getCourseViewPdfUrl } from '../data/programs';
+import { openPdfUrl } from '../utils/openPdf';
 
 const Services = () => {
   const [searchParams] = useSearchParams();
   const [selectedProgram, setSelectedProgram] = useState(null);
   const navigate = useNavigate();
+
+  const openCoursePdf = (course) => {
+    openPdfUrl(getCourseViewPdfUrl(course));
+  };
 
   useEffect(() => {
     const programName = searchParams.get('program');
@@ -112,6 +117,16 @@ const Services = () => {
                             <span className="text-dark-light text-sm">Duration:</span>
                             <span className="font-semibold text-dark">{course.duration}</span>
                           </div>
+
+                          <Button
+                            variant="primary"
+                            size="md"
+                            className="w-full group"
+                            onClick={() => openCoursePdf(course)}
+                          >
+                            Course View
+                            <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                          </Button>
                           
                           <div className="flex justify-between items-center border-t pt-3">
                             <span className="text-dark-light">Course Fee:</span>

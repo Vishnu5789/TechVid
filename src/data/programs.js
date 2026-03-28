@@ -1,3 +1,12 @@
+/** Shared brochure: place `techvidin.pdf` in public/pdfs/ */
+export const TECHVID_PDF = '/pdfs/techvidin.pdf';
+
+/** Course View uses `course.pdf` filename in public/pdfs/, else TECHVID_PDF. */
+export function getCourseViewPdfUrl(course) {
+  if (course.pdf) return `/pdfs/${encodeURIComponent(course.pdf)}`;
+  return TECHVID_PDF;
+}
+
 export const programCategories = [
   {
     id: 'btech',
@@ -14,6 +23,7 @@ export const programCategories = [
         image: '/images/courses/ai-ml.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'aiml.pdf',
       },
       {
         id: 'btech-fullstack',
@@ -22,6 +32,7 @@ export const programCategories = [
         image: '/images/courses/full-stack.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'fullstack.pdf',
       },
       {
         id: 'btech-cybersecurity',
@@ -30,6 +41,7 @@ export const programCategories = [
         image: '/images/courses/cyber-security.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'cyber.pdf',
       },
       {
         id: 'btech-datascience',
@@ -38,6 +50,7 @@ export const programCategories = [
         image: '/images/courses/data-science.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'data.pdf',
       },
     ],
   },
@@ -56,6 +69,7 @@ export const programCategories = [
         image: '/images/courses/ai-ml.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'aiml.pdf',
       },
       {
         id: 'degree-fullstack',
@@ -64,6 +78,7 @@ export const programCategories = [
         image: '/images/courses/full-stack.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'fullstack.pdf',
       },
       {
         id: 'degree-cybersecurity',
@@ -72,6 +87,7 @@ export const programCategories = [
         image: '/images/courses/cyber-security.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'cyber.pdf',
       },
       {
         id: 'degree-datascience',
@@ -80,6 +96,7 @@ export const programCategories = [
         image: '/images/courses/data-science.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'data.pdf',
       },
       {
         id: 'degree-medicalcoding',
@@ -88,6 +105,7 @@ export const programCategories = [
         image: '/images/courses/medical-coding.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'medical.pdf',
       },
       {
         id: 'degree-pharmacovigilance',
@@ -96,6 +114,7 @@ export const programCategories = [
         image: '/images/courses/Pharmacovigilance.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'pharma.pdf',
       },
       {
         id: 'degree-regulatory',
@@ -104,6 +123,7 @@ export const programCategories = [
         image: '/images/courses/Regulatory Affairs.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'regular.pdf',
       },
     ],
   },
@@ -122,6 +142,7 @@ export const programCategories = [
         image: '/images/courses/ai-ml.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'aiml.pdf',
       },
       {
         id: 'mca-fullstack',
@@ -130,6 +151,7 @@ export const programCategories = [
         image: '/images/courses/full-stack.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'fullstack.pdf',
       },
       {
         id: 'mca-cybersecurity',
@@ -138,6 +160,7 @@ export const programCategories = [
         image: '/images/courses/cyber-security.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'cyber.pdf',
       },
       {
         id: 'mca-datascience',
@@ -146,6 +169,7 @@ export const programCategories = [
         image: '/images/courses/data-science.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'data.pdf',
       },
     ],
   },
@@ -164,6 +188,7 @@ export const programCategories = [
         image: '/images/courses/hr.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'hr.pdf',
       },
       {
         id: 'mba-digital-marketing',
@@ -172,6 +197,7 @@ export const programCategories = [
         image: '/images/courses/digital-marketing.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'digital.pdf',
       },
       {
         id: 'mba-finance',
@@ -180,6 +206,7 @@ export const programCategories = [
         image: '/images/courses/finance.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'finance.pdf',
       },
     ],
   },
@@ -198,6 +225,7 @@ export const programCategories = [
         image: '/images/courses/medical-coding.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'medical.pdf',
       },
       {
         id: 'pharmacy-pharmacovigilance',
@@ -206,6 +234,7 @@ export const programCategories = [
         image: '/images/courses/Pharmacovigilance.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'pharma.pdf',
       },
       {
         id: 'pharmacy-regulatory',
@@ -214,6 +243,7 @@ export const programCategories = [
         image: '/images/courses/Regulatory Affairs.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'regular.pdf',
       },
     ],
   },
@@ -226,20 +256,13 @@ export const programCategories = [
     featured: true,
     programs: [
       {
-        id: 'agriculture-ai',
-        name: 'Artificial Intelligence in Agriculture',
-        description: 'Apply AI technologies to farming, crop monitoring, precision agriculture, and smart farming solutions.',
-        image: '/images/courses/Artificial Intelligence in Agriculture.png',
-        price: 15000,
-        duration: '3 months',
-      },
-      {
         id: 'agriculture-genetic',
         name: 'Genetic Engineering',
         description: 'Biotechnology applications in agriculture, crop improvement, and sustainable agricultural practices.',
         image: '/images/courses/Genetic Engineering.png',
         price: 15000,
         duration: '3 months',
+        pdf: 'gen.pdf',
       },
     ],
   },
