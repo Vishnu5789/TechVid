@@ -90,9 +90,17 @@ const Contact = () => {
     },
     {
       icon: FaEnvelope,
-      title: 'Email Now',
-      content: contactInfo.email,
-      link: `mailto:${contactInfo.email}`,
+      title: 'Mail Now',
+      content: (
+        <>
+          {contactInfo.emails.map((addr) => (
+            <span key={addr} className="block">
+              {addr}
+            </span>
+          ))}
+        </>
+      ),
+      link: `mailto:${contactInfo.emails.join(',')}`,
       color: 'text-accent',
     },
   ];
@@ -101,7 +109,7 @@ const Contact = () => {
     <>
       <Helmet>
         <title>Contact Us - Get In Touch | TechVid Innovations Hyderabad</title>
-        <meta name="description" content="Contact TechVid Innovations in Madhapur, Hyderabad. Call +91 98495 40110 or email hr@techvidin.com. Follow us on Instagram and WhatsApp for instant support." />
+        <meta name="description" content="Contact TechVid Innovations in Madhapur, Hyderabad. Call +91 98495 40110 or email admin@techvidin.com / hr@techvidin.com. Follow us on Instagram and WhatsApp for instant support." />
         <meta name="keywords" content="contact TechVid, education institute Hyderabad, Madhapur coaching center, online education contact, tech courses enquiry" />
         <link rel="canonical" href="https://www.techvidin.com/contact" />
         <meta property="og:title" content="Contact TechVid Innovations" />

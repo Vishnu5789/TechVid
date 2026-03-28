@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaStar, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaStar } from 'react-icons/fa';
 import Card from '../common/Card';
 import { reviewPlatforms } from '../../data/reviews';
 
@@ -49,14 +49,6 @@ const TrustIndicators = () => {
                     {platform.rating}
                   </span>
                 </div>
-                <a
-                  href={platform.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-primary hover:text-primary-600 transition-colors font-medium"
-                >
-                  View Insights <FaExternalLinkAlt className="ml-2 text-sm" />
-                </a>
               </Card>
             </motion.div>
           ))}

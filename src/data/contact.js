@@ -1,6 +1,7 @@
 export const contactInfo = {
   phone: '+91 9112048888',
-  email: 'hr@techvidin.com',
+  /** Shown in Mail Now / footer; mailto opens both recipients. */
+  emails: ['admin@techvidin.com', 'hr@techvidin.com'],
   address: {
     line1: '1st Floor, TECHVID INNOVATIONS, Baby Koo, R.R.Towers,',
     line2: 'Madhapur, Hyderabad,',

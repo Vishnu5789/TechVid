@@ -126,11 +126,18 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href={`mailto:${contactInfo.email}`}
+                  href={`mailto:${contactInfo.emails.join(',')}`}
                   className="flex items-start space-x-2 text-gray-300 hover:text-accent transition-colors text-sm"
                 >
                   <FaEnvelope className="mt-1 flex-shrink-0" />
-                  <span>{contactInfo.email}</span>
+                  <span>
+                    {contactInfo.emails.map((addr, i) => (
+                      <React.Fragment key={addr}>
+                        {i > 0 && <br />}
+                        {addr}
+                      </React.Fragment>
+                    ))}
+                  </span>
                 </a>
               </li>
               <li>
