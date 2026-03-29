@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '../common/Button';
+import { contactInfo } from '../../data/contact';
 
 const CTA = () => {
   return (
@@ -79,13 +80,20 @@ const CTA = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
             >
-              <Button
-                variant="primary"
-                size="lg"
-                className="bg-accent hover:bg-accent-600"
+              <a
+                href={contactInfo.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block"
               >
-                Join Our Community
-              </Button>
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="bg-accent hover:bg-accent-600"
+                >
+                  Join Our Community
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
         </div>
