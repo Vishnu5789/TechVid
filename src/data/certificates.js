@@ -48,7 +48,7 @@ export const certificates = [
     id: 7,
     title: 'Training Completion Certificate',
     company: 'TECHVID INNOVATIONS',
-    image: '/images/certificates/training.png',
+    image: '/images/certificates/image.png',
     verifyLink: '#',
   },
 ];
