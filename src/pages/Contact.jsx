@@ -81,8 +81,7 @@ const Contact = () => {
       title: 'Call Now',
       content: (
         <>
-          {contactInfo.phone}<br />
-          {contactInfo.phone2}
+          {contactInfo.phone}
         </>
       ),
       link: `tel:${contactInfo.phone}`,
@@ -109,7 +108,7 @@ const Contact = () => {
     <>
       <Helmet>
         <title>Contact Us - Get In Touch | TechVid Innovations Hyderabad</title>
-        <meta name="description" content="Contact TechVid Innovations in Madhapur, Hyderabad. Call +91 98495 40110 or email admin@techvidin.com / hr@techvidin.com. Follow us on Instagram and WhatsApp for instant support." />
+        <meta name="description" content="Contact TechVid Innovations in Madhapur, Hyderabad. Call +91 92475 90742 or email admin@techvidin.com / hr@techvidin.com. Follow us on Instagram and WhatsApp for instant support." />
         <meta name="keywords" content="contact TechVid, education institute Hyderabad, Madhapur coaching center, online education contact, tech courses enquiry" />
         <link rel="canonical" href="https://www.techvidin.com/contact" />
         <meta property="og:title" content="Contact TechVid Innovations" />

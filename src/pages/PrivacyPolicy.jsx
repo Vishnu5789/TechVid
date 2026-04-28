@@ -68,7 +68,7 @@ const PrivacyPolicy = () => {
     {
       icon: FaEnvelope,
       title: 'Contact Us',
-      content: 'If you have any questions, concerns, or requests regarding this privacy policy or how we handle your personal information, please contact us at hr@techvidin.com or call us at +91 98495 40110. We are committed to addressing your privacy concerns promptly.',
+      content: 'If you have any questions, concerns, or requests regarding this privacy policy or how we handle your personal information, please contact us at hr@techvidin.com or call us at +91 92475 90742. We are committed to addressing your privacy concerns promptly.',
       color: 'secondary',
     },
   ];

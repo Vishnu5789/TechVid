@@ -12,7 +12,8 @@ const Hero = () => {
 
   return (
     <section className="relative gradient-hero min-h-screen flex items-center overflow-hidden pt-32 md:pt-40">
-      
+
+
       {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div

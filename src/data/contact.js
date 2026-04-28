@@ -1,5 +1,5 @@
 export const contactInfo = {
-  phone: '+91 9112048888',
+  phone: '+91 92475 90742',
   /** Shown in Mail Now / footer; mailto opens both recipients. */
   emails: ['admin@techvidin.com', 'hr@techvidin.com'],
   address: {
@@ -7,7 +7,7 @@ export const contactInfo = {
     line2: 'Madhapur, Hyderabad,',
     line3: 'Telangana, 500081',
   },
-  whatsapp: '+91 9112048888',
+  whatsapp: '+91 92475 90742',
   location: 'https://maps.google.com/?q=17.436697,78.394005',
   officeHours: {
     weekdays: 'Tuesday - Sunday: 10:30 AM - 7:30 PM',
