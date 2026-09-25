@@ -1,14 +1,5 @@
 export const founders = [
-  {
-    id: 1,
-    name: 'Anitha Ainavolu',
-    role: 'Founder',
-    bio: 'A visionary lady founder driven by passion and innovation, building meaningful impact through leadership and creativity. Empowering teams, transforming ideas into reality, and inspiring growth with confidence, resilience, and a strong entrepreneurial spirit.',
-    image: '/images/founders/Picture 1.png',
-    linkedin: '#',
-    portfolio: '#',
-    featured: true,
-  },
+  
   {
     id: 2,
     name: 'Murali Venkata Sai Mane',
@@ -59,29 +50,23 @@ export const team = [
   {
     id: 3,
     name: 'Aparna Vushagoni',
-    role: 'Senior Manager',
+    role: 'Associate General Manager',
     image: '/images/our-team/Aparna vushagoni.png',
     linkedin: '#',
   },
   {
     id: 4,
-    name: 'Medinti Meghana',
-    role: 'Senior Manager',
+    name: 'Satish',
+    role: 'Associate Senior Manager',
     image: '#',
-    linkedin: '#',
+    linkedin: 'linkedin.com/in/satish-kumar-sambhana-98a80b253',
   },
   {
     id: 5,
-    name: 'Kousalya',
-    role: 'Associate Senior Manager',
+    name: 'Bhargavi Gangimalla',
+    role: 'Senior HR',
     image: '#',
-    linkedin: '#',
+    linkedin: 'linkedin.com/in/bhargavi-gangimalla-17a67935b',
   },
-  {
-    id: 6,
-    name: 'Samyukta',
-    role: 'Leadgen Manager',
-    image: '#',
-    linkedin: '#',
-  }
+  
 ];

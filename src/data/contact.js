@@ -1,18 +1,28 @@
 export const contactInfo = {
-  phone: '+91 92475 90742',
+  phone: '+91 92475 90748',
+
   /** Shown in Mail Now / footer; mailto opens both recipients. */
-  emails: ['admin@techvidin.com', 'hr@techvidin.com'],
+  emails: [
+    'techvid@techvidin.com',
+    'admin@techvidin.com',
+    'hr@techvidin.com'
+  ],
+
   address: {
     line1: '1st Floor, TECHVID INNOVATIONS, Baby Koo, R.R.Towers,',
     line2: 'Madhapur, Hyderabad,',
     line3: 'Telangana, 500081',
   },
-  whatsapp: '+91 92475 90742',
+
+  whatsapp: '+91 92475 90748',
+
   location: 'https://maps.google.com/?q=17.436697,78.394005',
+
   officeHours: {
-    weekdays: 'Tuesday - Sunday: 10:30 AM - 7:30 PM',
-    closed: 'Monday: Closed',
+    weekdays:'Wednesday - Monday: 10:30 AM - 7:30 PM',
+    closed: 'Tuesday',
   },
+
   social: {
     linkedin: 'https://www.linkedin.com/company/techvid-innovations-pvt-ltd/about/',
     twitter: '#',

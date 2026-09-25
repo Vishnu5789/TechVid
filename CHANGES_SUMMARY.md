@@ -23,8 +23,8 @@
 - Instagram: **https://www.instagram.com/techvid_innovations**
 
 ### 3. **Office Hours Updated**
-- **Tuesday - Sunday**: 10:30 AM - 7:30 PM
-- **Monday**: Closed
+- **Wednesday - Monday**: 10:30 AM - 7:30 PM
+- **Tuesday**: Closed
 
 ### 4. **Founders Updated** (4 Founders)
 
